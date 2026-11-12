@@ -35,6 +35,7 @@ def test_scan_a_corpus_with_its_truth(made: Path, tmp_path: Path, capsys: pytest
     assert (tmp_path / "r" / "summary.png").stat().st_size > 10_000
     lines = (tmp_path / "r" / "files.jsonl").read_text(encoding="utf-8").splitlines()
     assert len(lines) == rep["files"]["total"] == 81
+    assert all(b"\r" not in (tmp_path / "r" / f).read_bytes() for f in ("report.json", "report.md", "files.jsonl"))
     md = (tmp_path / "r" / "report.md").read_text(encoding="utf-8")
     assert md == report.render_report(rep) and "## Against the truth" in md
 

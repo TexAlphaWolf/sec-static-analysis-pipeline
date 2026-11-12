@@ -117,6 +117,6 @@ def write(result: dict[str, Any], out: Path) -> None:
     from . import report
 
     out.mkdir(parents=True, exist_ok=True)
-    (out / "bench.json").write_text(json.dumps(result, indent=1) + "\n", encoding="utf-8")
-    (out / "bench.md").write_text(report.render_bench(result), encoding="utf-8")
+    (out / "bench.json").write_text(json.dumps(result, indent=1) + "\n", encoding="utf-8", newline="\n")
+    (out / "bench.md").write_text(report.render_bench(result), encoding="utf-8", newline="\n")
     report.bench_figure(result, out / "bench.png")

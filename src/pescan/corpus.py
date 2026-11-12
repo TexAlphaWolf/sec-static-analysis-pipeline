@@ -253,5 +253,5 @@ def write_corpus(out: str | Path, n: int, seed: int, damaged: int = 0) -> dict[s
             (folder / "damaged" / f"{s.name}.{k}").write_bytes(bad)
             n_damaged += 1
     doc = {"kind": "truth", "seed": seed, "now": NOW, "files": truth}
-    (folder / "truth.json").write_text(json.dumps(doc, indent=1) + "\n", encoding="utf-8")
+    (folder / "truth.json").write_text(json.dumps(doc, indent=1) + "\n", encoding="utf-8", newline="\n")
     return {"files": n, "damaged": n_damaged, "truth": doc}

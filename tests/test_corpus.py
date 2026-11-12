@@ -83,6 +83,7 @@ def test_write_corpus(tmp_path: Path) -> None:
     res = C.write_corpus(tmp_path / "c", 5, SEED, damaged=2)
     names = sorted(p.name for p in (tmp_path / "c").iterdir())
     assert names == sorted(["damaged", "truth.json", *res["truth"]["files"]]) and len(names) == 7
+    assert b"\r" not in (tmp_path / "c" / "truth.json").read_bytes()  # the same bytes on every system
     truth = json.loads((tmp_path / "c" / "truth.json").read_text(encoding="utf-8"))
     assert truth["now"] == C.NOW and len(truth["files"]) == 5 and res["damaged"] == 10
     assert len(list((tmp_path / "c" / "damaged").iterdir())) == 10

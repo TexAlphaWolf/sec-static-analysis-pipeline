@@ -55,10 +55,10 @@ def cmd_scan(a: argparse.Namespace) -> int:
     if a.out:
         out = Path(a.out)
         out.mkdir(parents=True, exist_ok=True)
-        (out / "report.json").write_text(json.dumps(rep, indent=1) + "\n", encoding="utf-8")
-        (out / "report.md").write_text(report.render_report(rep), encoding="utf-8")
+        (out / "report.json").write_text(json.dumps(rep, indent=1) + "\n", encoding="utf-8", newline="\n")
+        (out / "report.md").write_text(report.render_report(rep), encoding="utf-8", newline="\n")
         report.report_figure(rep, out / "summary.png")
-        with (out / "files.jsonl").open("w", encoding="utf-8") as fh:
+        with (out / "files.jsonl").open("w", encoding="utf-8", newline="\n") as fh:
             for r in records:
                 fh.write(json.dumps(r, separators=(",", ":")) + "\n")
         print(f"written: {out / 'report.json'}, {out / 'report.md'}, {out / 'summary.png'}, {out / 'files.jsonl'}")
@@ -123,7 +123,7 @@ def cmd_render(a: argparse.Namespace) -> int:
     else:
         raise ValueError(f"{a.json} is neither a scan report nor a benchmark")
     if a.output:
-        Path(a.output).write_text(text, encoding="utf-8")
+        Path(a.output).write_text(text, encoding="utf-8", newline="\n")
     else:
         sys.stdout.write(text)
     return EXIT_OK

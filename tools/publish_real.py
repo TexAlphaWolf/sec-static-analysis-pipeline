@@ -27,8 +27,8 @@ def main(argv: list[str]) -> int:
     rep = publish(json.loads(Path(src).read_text(encoding="utf-8")), source)
     base = Path(dest)
     base.parent.mkdir(parents=True, exist_ok=True)
-    base.with_suffix(".json").write_text(json.dumps(rep, indent=1) + "\n", encoding="utf-8")
-    base.with_suffix(".md").write_text(report.render_report(rep), encoding="utf-8")
+    base.with_suffix(".json").write_text(json.dumps(rep, indent=1) + "\n", encoding="utf-8", newline="\n")
+    base.with_suffix(".md").write_text(report.render_report(rep), encoding="utf-8", newline="\n")
     report.report_figure(rep, base.with_suffix(".png"))
     print(f"written: {base.with_suffix('.json')}, {base.with_suffix('.md')}, {base.with_suffix('.png')}")
     return 0
