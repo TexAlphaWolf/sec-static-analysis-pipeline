@@ -1,0 +1,198 @@
+{
+ "kind": "bench",
+ "environment": {
+  "pescan": "1.0.0",
+  "python": "3.13.18",
+  "system": "Linux x86_64",
+  "cpus": 12,
+  "seed": 1,
+  "repeat": 3,
+  "cmdline": "bench --sizes 200,1000 --workers 1,2,4,8 --repeat 3 --verify-files 1000 --out /out"
+ },
+ "steps": [
+  {
+   "files": 200,
+   "mb": 5.673717,
+   "step": "parse",
+   "seconds": 0.009610407999844028
+  },
+  {
+   "files": 200,
+   "mb": 5.673717,
+   "step": "hashes",
+   "seconds": 0.01210733599964442
+  },
+  {
+   "files": 200,
+   "mb": 5.673717,
+   "step": "traits, strings, entropy",
+   "seconds": 0.26220097400027953
+  },
+  {
+   "files": 200,
+   "mb": 5.673717,
+   "step": "YARA rules",
+   "seconds": 0.10923506300014196
+  },
+  {
+   "files": 200,
+   "mb": 5.673717,
+   "step": "pefile (reference)",
+   "seconds": 2.226015908000136
+  },
+  {
+   "files": 1000,
+   "mb": 28.220091,
+   "step": "parse",
+   "seconds": 0.057799372999852494
+  },
+  {
+   "files": 1000,
+   "mb": 28.220091,
+   "step": "hashes",
+   "seconds": 0.0621762129999297
+  },
+  {
+   "files": 1000,
+   "mb": 28.220091,
+   "step": "traits, strings, entropy",
+   "seconds": 1.110519487000147
+  },
+  {
+   "files": 1000,
+   "mb": 28.220091,
+   "step": "YARA rules",
+   "seconds": 0.5375786589997915
+  },
+  {
+   "files": 1000,
+   "mb": 28.220091,
+   "step": "pefile (reference)",
+   "seconds": 15.45904734900023
+  }
+ ],
+ "workers": [
+  {
+   "workers": 1,
+   "files": 1001,
+   "seconds": 2.003545094999936
+  },
+  {
+   "workers": 2,
+   "files": 1001,
+   "seconds": 1.2292350359998636
+  },
+  {
+   "workers": 4,
+   "files": 1001,
+   "seconds": 0.7607801240001208
+  },
+  {
+   "workers": 8,
+   "files": 1001,
+   "seconds": 0.5368619690002561
+  }
+ ],
+ "pairs": [
+  {
+   "what": "entropy of 4 MiB",
+   "fast_s": 0.013848027999756596,
+   "literal_s": 0.37089125300008163,
+   "same": true
+  },
+  {
+   "what": "checksum of a 4 MiB file",
+   "fast_s": 0.00036449700019147713,
+   "literal_s": 0.32202119699968534,
+   "same": true
+  }
+ ],
+ "yara_retries": [],
+ "verification": {
+  "files": 1000,
+  "seed": 1,
+  "damaged": 3000,
+  "ok": true,
+  "lines": [
+   [
+    "Python traits against the truth",
+    "1,000 files, 2,407 traits set, 0 wrong"
+   ],
+   [
+    "YARA rules against the truth",
+    "1,000 files, 0 wrong"
+   ],
+   [
+    "parser against pefile (20 fields, imports and import hash included)",
+    "1,000 of 1,000 files identical"
+   ],
+   [
+    "entropy: NumPy against one byte value at a time",
+    "4,498 sections, largest difference 2.4e-14 bits"
+   ],
+   [
+    "checksum: NumPy, word by word, and pefile",
+    "1,000 of 1,000 files give the same checksum three ways"
+   ],
+   [
+    "damaged copies: the parser fails only with its own error",
+    "3,000 copies, 842 refused, 0 other failures"
+   ]
+  ],
+  "details": {
+   "files": 1000,
+   "seed": 1,
+   "damaged": 3000,
+   "traits_set": 2407,
+   "truth_counts": {
+    "overlay": 71,
+    "no_embedded_signature": 635,
+    "tls": 82,
+    "no_cfg": 236,
+    "no_aslr": 245,
+    "debugger_check": 108,
+    "checksum_mismatch": 86,
+    "no_dep": 263,
+    "no_high_entropy_va": 163,
+    "entry_outside_code": 58,
+    "future_timestamp": 64,
+    "packer_section": 75,
+    "few_imports": 80,
+    "high_entropy_code": 103,
+    "injection_imports": 62,
+    "writable_code": 76
+   },
+   "sections": 4498,
+   "entropy_max_diff": 2.398081733190338e-14,
+   "checksum_same": 1000,
+   "damaged_stats": {
+    "damaged": 3000,
+    "own_refused": 842,
+    "ref_refused": 838,
+    "both_read": 2153,
+    "both_identical": 2085,
+    "yara_compared": 2158,
+    "yara_same": 1823
+   },
+   "damaged_field_differences": {
+    "checksum_computed": 3,
+    "directories": 3,
+    "export": 9,
+    "imphash": 58,
+    "imports": 58
+   },
+   "damaged_yara_differences": {
+    "checksum_mismatch": 1,
+    "debugger_check": 9,
+    "entry_outside_code": 26,
+    "few_imports": 54,
+    "injection_imports": 3,
+    "no_dep": 1,
+    "no_embedded_signature": 2,
+    "overlay": 69,
+    "packer_section": 4,
+    "writable_code": 257
+   }
+  }
+ }
+}

@@ -1,0 +1,1009 @@
+{
+ "kind": "scan",
+ "version": "1.0.0",
+ "source": "demo: 300 generated files and 300 damaged copies (seed 1)",
+ "now": 1800000000,
+ "elapsed_s": 6.198416541,
+ "options": {
+  "depth": null,
+  "max_mb": 256,
+  "yara": true,
+  "reference": true,
+  "workers": 1
+ },
+ "files": {
+  "total": 601,
+  "pe": 526,
+  "not_pe": 2,
+  "malformed": 73,
+  "unreadable": 0,
+  "too_big": 0,
+  "bytes": 15726472,
+  "pe_bytes": 13810798,
+  "malformed_reasons": [
+   [
+    "the PE header is outside the file",
+    37
+   ],
+   [
+    "no PE signature at 0x40",
+    12
+   ],
+   [
+    "no PE signature at 0x0",
+    8
+   ],
+   [
+    "no PE signature at 0x125",
+    1
+   ],
+   [
+    "no PE signature at 0x137",
+    1
+   ]
+  ]
+ },
+ "pe": {
+  "machines": [
+   [
+    "x64",
+    359
+   ],
+   [
+    "x86",
+    167
+   ]
+  ],
+  "bits_64": 359,
+  "dll": 227,
+  "subsystems": [
+   [
+    "windows gui",
+    274
+   ],
+   [
+    "windows console",
+    252
+   ]
+  ],
+  "dotnet": 53,
+  "signed_embedded": 181,
+  "checksum_zero": 237,
+  "checksum_right": 141,
+  "no_imports": 98,
+  "exports": 140,
+  "with_warnings": 44
+ },
+ "traits": {
+  "packer_section": 43,
+  "high_entropy_code": 41,
+  "writable_code": 40,
+  "entry_outside_code": 58,
+  "injection_imports": 30,
+  "debugger_check": 49,
+  "few_imports": 112,
+  "checksum_mismatch": 148,
+  "future_timestamp": 31,
+  "overlay": 58,
+  "tls": 39,
+  "no_aslr": 145,
+  "no_dep": 133,
+  "no_cfg": 101,
+  "no_high_entropy_va": 69,
+  "no_embedded_signature": 345
+ },
+ "indicators_per_file": [
+  161,
+  173,
+  116,
+  62,
+  12,
+  2
+ ],
+ "flagged": [
+  [
+   "damaged/sample00017.dll.0",
+   [
+    "entry_outside_code",
+    "few_imports",
+    "checksum_mismatch",
+    "overlay",
+    "tls"
+   ]
+  ],
+  [
+   "damaged/sample00080.dll.0",
+   [
+    "writable_code",
+    "entry_outside_code",
+    "checksum_mismatch",
+    "overlay",
+    "tls"
+   ]
+  ],
+  [
+   "damaged/sample00051.dll.0",
+   [
+    "entry_outside_code",
+    "few_imports",
+    "checksum_mismatch",
+    "tls"
+   ]
+  ],
+  [
+   "damaged/sample00104.exe.0",
+   [
+    "writable_code",
+    "injection_imports",
+    "debugger_check",
+    "checksum_mismatch"
+   ]
+  ],
+  [
+   "damaged/sample00161.exe.0",
+   [
+    "entry_outside_code",
+    "few_imports",
+    "checksum_mismatch",
+    "tls"
+   ]
+  ],
+  [
+   "damaged/sample00162.dll.0",
+   [
+    "packer_section",
+    "entry_outside_code",
+    "few_imports",
+    "overlay"
+   ]
+  ],
+  [
+   "damaged/sample00193.exe.0",
+   [
+    "entry_outside_code",
+    "few_imports",
+    "checksum_mismatch",
+    "future_timestamp"
+   ]
+  ],
+  [
+   "damaged/sample00208.exe.0",
+   [
+    "debugger_check",
+    "checksum_mismatch",
+    "overlay",
+    "tls"
+   ]
+  ],
+  [
+   "damaged/sample00210.dll.0",
+   [
+    "high_entropy_code",
+    "entry_outside_code",
+    "debugger_check",
+    "overlay"
+   ]
+  ],
+  [
+   "damaged/sample00216.dll.0",
+   [
+    "packer_section",
+    "writable_code",
+    "few_imports",
+    "checksum_mismatch"
+   ]
+  ],
+  [
+   "damaged/sample00223.dll.0",
+   [
+    "high_entropy_code",
+    "injection_imports",
+    "checksum_mismatch",
+    "tls"
+   ]
+  ],
+  [
+   "damaged/sample00245.dll.0",
+   [
+    "few_imports",
+    "checksum_mismatch",
+    "future_timestamp",
+    "overlay"
+   ]
+  ],
+  [
+   "damaged/sample00250.exe.0",
+   [
+    "packer_section",
+    "debugger_check",
+    "few_imports",
+    "checksum_mismatch"
+   ]
+  ],
+  [
+   "sample00080.dll",
+   [
+    "writable_code",
+    "entry_outside_code",
+    "injection_imports",
+    "tls"
+   ]
+  ],
+  [
+   "damaged/sample00001.exe.0",
+   [
+    "few_imports",
+    "checksum_mismatch",
+    "overlay"
+   ]
+  ],
+  [
+   "damaged/sample00007.exe.0",
+   [
+    "writable_code",
+    "checksum_mismatch",
+    "future_timestamp"
+   ]
+  ],
+  [
+   "damaged/sample00009.dll.0",
+   [
+    "packer_section",
+    "few_imports",
+    "checksum_mismatch"
+   ]
+  ],
+  [
+   "damaged/sample00015.exe.0",
+   [
+    "entry_outside_code",
+    "few_imports",
+    "checksum_mismatch"
+   ]
+  ],
+  [
+   "damaged/sample00019.exe.0",
+   [
+    "high_entropy_code",
+    "checksum_mismatch",
+    "tls"
+   ]
+  ],
+  [
+   "damaged/sample00020.dll.0",
+   [
+    "entry_outside_code",
+    "few_imports",
+    "checksum_mismatch"
+   ]
+  ],
+  [
+   "damaged/sample00030.exe.0",
+   [
+    "entry_outside_code",
+    "few_imports",
+    "checksum_mismatch"
+   ]
+  ],
+  [
+   "damaged/sample00031.dll.0",
+   [
+    "entry_outside_code",
+    "few_imports",
+    "checksum_mismatch"
+   ]
+  ],
+  [
+   "damaged/sample00032.exe.0",
+   [
+    "entry_outside_code",
+    "few_imports",
+    "checksum_mismatch"
+   ]
+  ],
+  [
+   "damaged/sample00034.exe.0",
+   [
+    "injection_imports",
+    "checksum_mismatch",
+    "future_timestamp"
+   ]
+  ],
+  [
+   "damaged/sample00037.exe.0",
+   [
+    "high_entropy_code",
+    "few_imports",
+    "checksum_mismatch"
+   ]
+  ]
+ ],
+ "examples": {
+  "packer_section": [
+   "damaged/sample00009.dll.0",
+   "damaged/sample00023.dll.0",
+   "damaged/sample00054.exe.0",
+   "damaged/sample00059.exe.0",
+   "damaged/sample00092.exe.0",
+   "damaged/sample00094.dll.0",
+   "damaged/sample00102.dll.0",
+   "damaged/sample00114.exe.0"
+  ],
+  "high_entropy_code": [
+   "damaged/sample00019.exe.0",
+   "damaged/sample00037.exe.0",
+   "damaged/sample00086.exe.0",
+   "damaged/sample00092.exe.0",
+   "damaged/sample00108.dll.0",
+   "damaged/sample00119.dll.0",
+   "damaged/sample00133.exe.0",
+   "damaged/sample00134.dll.0"
+  ],
+  "writable_code": [
+   "damaged/sample00007.exe.0",
+   "damaged/sample00027.dll.0",
+   "damaged/sample00058.exe.0",
+   "damaged/sample00059.exe.0",
+   "damaged/sample00078.dll.0",
+   "damaged/sample00080.dll.0",
+   "damaged/sample00081.exe.0",
+   "damaged/sample00087.exe.0"
+  ],
+  "entry_outside_code": [
+   "damaged/sample00006.exe.0",
+   "damaged/sample00015.exe.0",
+   "damaged/sample00017.dll.0",
+   "damaged/sample00018.exe.0",
+   "damaged/sample00020.dll.0",
+   "damaged/sample00030.exe.0",
+   "damaged/sample00031.dll.0",
+   "damaged/sample00032.exe.0"
+  ],
+  "injection_imports": [
+   "damaged/sample00034.exe.0",
+   "damaged/sample00040.exe.0",
+   "damaged/sample00065.dll.0",
+   "damaged/sample00087.exe.0",
+   "damaged/sample00104.exe.0",
+   "damaged/sample00121.exe.0",
+   "damaged/sample00127.dll.0",
+   "damaged/sample00223.dll.0"
+  ],
+  "debugger_check": [
+   "damaged/sample00004.dll.0",
+   "damaged/sample00066.dll.0",
+   "damaged/sample00081.exe.0",
+   "damaged/sample00083.exe.0",
+   "damaged/sample00098.dll.0",
+   "damaged/sample00104.exe.0",
+   "damaged/sample00128.exe.0",
+   "damaged/sample00149.dll.0"
+  ],
+  "few_imports": [
+   "damaged/sample00001.exe.0",
+   "damaged/sample00005.exe.0",
+   "damaged/sample00006.exe.0",
+   "damaged/sample00009.dll.0",
+   "damaged/sample00013.dll.0",
+   "damaged/sample00014.exe.0",
+   "damaged/sample00015.exe.0",
+   "damaged/sample00017.dll.0"
+  ],
+  "checksum_mismatch": [
+   "damaged/sample00001.exe.0",
+   "damaged/sample00003.exe.0",
+   "damaged/sample00004.dll.0",
+   "damaged/sample00007.exe.0",
+   "damaged/sample00008.dll.0",
+   "damaged/sample00009.dll.0",
+   "damaged/sample00010.exe.0",
+   "damaged/sample00011.dll.0"
+  ],
+  "future_timestamp": [
+   "damaged/sample00007.exe.0",
+   "damaged/sample00028.exe.0",
+   "damaged/sample00034.exe.0",
+   "damaged/sample00036.dll.0",
+   "damaged/sample00058.exe.0",
+   "damaged/sample00075.dll.0",
+   "damaged/sample00097.exe.0",
+   "damaged/sample00109.exe.0"
+  ],
+  "overlay": [
+   "damaged/sample00001.exe.0",
+   "damaged/sample00014.exe.0",
+   "damaged/sample00017.dll.0",
+   "damaged/sample00022.exe.0",
+   "damaged/sample00024.exe.0",
+   "damaged/sample00042.exe.0",
+   "damaged/sample00072.exe.0",
+   "damaged/sample00078.dll.0"
+  ],
+  "tls": [
+   "damaged/sample00010.exe.0",
+   "damaged/sample00016.dll.0",
+   "damaged/sample00017.dll.0",
+   "damaged/sample00019.exe.0",
+   "damaged/sample00051.dll.0",
+   "damaged/sample00080.dll.0",
+   "damaged/sample00106.exe.0",
+   "damaged/sample00119.dll.0"
+  ],
+  "no_aslr": [
+   "damaged/sample00003.exe.0",
+   "damaged/sample00006.exe.0",
+   "damaged/sample00008.dll.0",
+   "damaged/sample00011.dll.0",
+   "damaged/sample00015.exe.0",
+   "damaged/sample00018.exe.0",
+   "damaged/sample00020.dll.0",
+   "damaged/sample00026.dll.0"
+  ],
+  "no_dep": [
+   "damaged/sample00004.dll.0",
+   "damaged/sample00007.exe.0",
+   "damaged/sample00013.dll.0",
+   "damaged/sample00019.exe.0",
+   "damaged/sample00021.dll.0",
+   "damaged/sample00028.exe.0",
+   "damaged/sample00037.exe.0",
+   "damaged/sample00039.exe.0"
+  ],
+  "no_cfg": [
+   "damaged/sample00004.dll.0",
+   "damaged/sample00006.exe.0",
+   "damaged/sample00007.exe.0",
+   "damaged/sample00010.exe.0",
+   "damaged/sample00017.dll.0",
+   "damaged/sample00020.dll.0",
+   "damaged/sample00027.dll.0",
+   "damaged/sample00034.exe.0"
+  ],
+  "no_high_entropy_va": [
+   "damaged/sample00005.exe.0",
+   "damaged/sample00028.exe.0",
+   "damaged/sample00041.dll.0",
+   "damaged/sample00047.dll.0",
+   "damaged/sample00053.exe.0",
+   "damaged/sample00057.exe.0",
+   "damaged/sample00059.exe.0",
+   "damaged/sample00078.dll.0"
+  ],
+  "no_embedded_signature": [
+   "damaged/sample00001.exe.0",
+   "damaged/sample00003.exe.0",
+   "damaged/sample00004.dll.0",
+   "damaged/sample00006.exe.0",
+   "damaged/sample00007.exe.0",
+   "damaged/sample00008.dll.0",
+   "damaged/sample00009.dll.0",
+   "damaged/sample00010.exe.0"
+  ]
+ },
+ "timestamps": {
+  "decades": [
+   [
+    2000,
+    176
+   ],
+   [
+    2010,
+    184
+   ],
+   [
+    2020,
+    166
+   ]
+  ],
+  "zero": 0,
+  "after_now": 31
+ },
+ "yara": {
+  "files": 526,
+  "errors": 0,
+  "retried": 0,
+  "same_traits": 473,
+  "counts": {
+   "packer_section": 43,
+   "high_entropy_code": 41,
+   "writable_code": 81,
+   "entry_outside_code": 55,
+   "injection_imports": 31,
+   "debugger_check": 49,
+   "few_imports": 108,
+   "checksum_mismatch": 148,
+   "future_timestamp": 31,
+   "overlay": 48,
+   "tls": 39,
+   "no_aslr": 145,
+   "no_dep": 133,
+   "no_cfg": 101,
+   "no_high_entropy_va": 69,
+   "no_embedded_signature": 345
+  },
+  "disagreements": {
+   "packer_section": 0,
+   "high_entropy_code": 0,
+   "writable_code": 41,
+   "entry_outside_code": 3,
+   "injection_imports": 3,
+   "debugger_check": 0,
+   "few_imports": 10,
+   "checksum_mismatch": 0,
+   "future_timestamp": 0,
+   "overlay": 10,
+   "tls": 0,
+   "no_aslr": 0,
+   "no_dep": 0,
+   "no_cfg": 0,
+   "no_high_entropy_va": 0,
+   "no_embedded_signature": 0
+  }
+ },
+ "reference": {
+  "files": 526,
+  "refused": 0,
+  "compared": 526,
+  "identical": 517,
+  "checksum_compared": 526,
+  "field_differences": {
+   "export": 1,
+   "imphash": 8,
+   "imports": 8
+  },
+  "refusals": []
+ },
+ "entropy": {
+  "executable": [
+   2,
+   0,
+   0,
+   1,
+   0,
+   1,
+   0,
+   0,
+   0,
+   450,
+   4,
+   0,
+   0,
+   1,
+   0,
+   41
+  ],
+  "other": [
+   109,
+   53,
+   32,
+   40,
+   86,
+   121,
+   76,
+   23,
+   4,
+   1027,
+   0,
+   2,
+   0,
+   1,
+   0,
+   84
+  ],
+  "executable_sections": 500,
+  "executable_high": 41
+ },
+ "top_section_names": [
+  [
+   ".rdata",
+   481
+  ],
+  [
+   ".data",
+   475
+  ],
+  [
+   ".idata",
+   470
+  ],
+  [
+   ".text",
+   451
+  ],
+  [
+   ".rsrc",
+   232
+  ],
+  [
+   "",
+   10
+  ],
+  [
+   ".MPRESS1",
+   6
+  ],
+  [
+   ".adata",
+   6
+  ],
+  [
+   ".enigma1",
+   4
+  ],
+  [
+   ".vmp1",
+   4
+  ],
+  [
+   ".yP",
+   4
+  ],
+  [
+   ".nsp2",
+   3
+  ],
+  [
+   ".vmp0",
+   3
+  ],
+  [
+   ".enigma2",
+   2
+  ],
+  [
+   ".kkrunch",
+   2
+  ]
+ ],
+ "top_dlls": [
+  [
+   "kernel32.dll",
+   320
+  ],
+  [
+   "api-ms-win-core-memory-l1-1-0.dll",
+   201
+  ],
+  [
+   "user32.dll",
+   198
+  ],
+  [
+   "advapi32.dll",
+   195
+  ],
+  [
+   "ws2_32.dll",
+   191
+  ],
+  [
+   "mscoree.dll",
+   37
+  ],
+  [
+   "api-ms-win-core-processthreads-l1-1-0.dll",
+   19
+  ],
+  [
+   "advapi32.dlln",
+   1
+  ],
+  [
+   "api-ms-win-core-memory-l1-1-0.dll\u00e4",
+   1
+  ],
+  [
+   "file and cannot be run.\r\n$",
+   1
+  ],
+  [
+   "function1",
+   1
+  ],
+  [
+   "kernel",
+   1
+  ],
+  [
+   "kernel32.dxl",
+   1
+  ],
+  [
+   "not be run.\r\n$",
+   1
+  ],
+  [
+   "t be run.\r\n$",
+   1
+  ]
+ ],
+ "top_functions": [
+  [
+   "GetProcAddress",
+   155
+  ],
+  [
+   "VirtualFree",
+   146
+  ],
+  [
+   "VirtualQuery",
+   145
+  ],
+  [
+   "LoadLibraryW",
+   134
+  ],
+  [
+   "RegQueryValueExW",
+   129
+  ],
+  [
+   "DispatchMessageW",
+   128
+  ],
+  [
+   "MessageBoxW",
+   128
+  ],
+  [
+   "CreateWindowExW",
+   124
+  ],
+  [
+   "OpenProcessToken",
+   124
+  ],
+  [
+   "RegCloseKey",
+   123
+  ],
+  [
+   "DefWindowProcW",
+   120
+  ],
+  [
+   "RegOpenKeyExW",
+   120
+  ],
+  [
+   "Sleep",
+   120
+  ],
+  [
+   "getaddrinfo",
+   120
+  ],
+  [
+   "GetMessageW",
+   118
+  ]
+ ],
+ "imphash": {
+  "distinct": 276,
+  "largest_groups": [
+   [
+    "f34d5f2d4577ed6d9ceec516c1f5a744",
+    17
+   ],
+   [
+    "e82dd51b077167be63c004bed23d0c1e",
+    13
+   ],
+   [
+    "dae02f32a21e03ce65412f6e56942daa",
+    12
+   ],
+   [
+    "0f63bf17b3592031c30c8e8b93ad5b2e",
+    4
+   ],
+   [
+    "8fec26d8206aa36c40b39d86e960a066",
+    4
+   ]
+  ]
+ },
+ "strings": {
+  "files_with_urls": 0,
+  "files_with_ipv4": 0,
+  "files_with_registry": 0,
+  "top_hosts": []
+ },
+ "accuracy": {
+  "files": 300,
+  "missing": 226,
+  "python": {
+   "packer_section": [
+    24,
+    0,
+    0
+   ],
+   "high_entropy_code": [
+    25,
+    0,
+    0
+   ],
+   "writable_code": [
+    21,
+    0,
+    0
+   ],
+   "entry_outside_code": [
+    16,
+    0,
+    0
+   ],
+   "injection_imports": [
+    20,
+    0,
+    0
+   ],
+   "debugger_check": [
+    32,
+    0,
+    0
+   ],
+   "few_imports": [
+    24,
+    0,
+    0
+   ],
+   "checksum_mismatch": [
+    21,
+    0,
+    0
+   ],
+   "future_timestamp": [
+    16,
+    0,
+    0
+   ],
+   "overlay": [
+    25,
+    0,
+    0
+   ],
+   "tls": [
+    20,
+    0,
+    0
+   ],
+   "no_aslr": [
+    80,
+    0,
+    0
+   ],
+   "no_dep": [
+    77,
+    0,
+    0
+   ],
+   "no_cfg": [
+    60,
+    0,
+    0
+   ],
+   "no_high_entropy_va": [
+    41,
+    0,
+    0
+   ],
+   "no_embedded_signature": [
+    198,
+    0,
+    0
+   ]
+  },
+  "yara": {
+   "packer_section": [
+    24,
+    0,
+    0
+   ],
+   "high_entropy_code": [
+    25,
+    0,
+    0
+   ],
+   "writable_code": [
+    21,
+    0,
+    0
+   ],
+   "entry_outside_code": [
+    16,
+    0,
+    0
+   ],
+   "injection_imports": [
+    20,
+    0,
+    0
+   ],
+   "debugger_check": [
+    32,
+    0,
+    0
+   ],
+   "few_imports": [
+    24,
+    0,
+    0
+   ],
+   "checksum_mismatch": [
+    21,
+    0,
+    0
+   ],
+   "future_timestamp": [
+    16,
+    0,
+    0
+   ],
+   "overlay": [
+    25,
+    0,
+    0
+   ],
+   "tls": [
+    20,
+    0,
+    0
+   ],
+   "no_aslr": [
+    80,
+    0,
+    0
+   ],
+   "no_dep": [
+    77,
+    0,
+    0
+   ],
+   "no_cfg": [
+    60,
+    0,
+    0
+   ],
+   "no_high_entropy_va": [
+    41,
+    0,
+    0
+   ],
+   "no_embedded_signature": [
+    198,
+    0,
+    0
+   ]
+  },
+  "exact_python": 300,
+  "exact_yara": 300
+ },
+ "speed": {
+  "files_per_s": 96.96024718968624,
+  "mb_per_s": 2.537175728022761
+ },
+ "groups": {
+  "indicators": [
+   "packer_section",
+   "high_entropy_code",
+   "writable_code",
+   "entry_outside_code",
+   "injection_imports",
+   "debugger_check",
+   "few_imports",
+   "checksum_mismatch",
+   "future_timestamp",
+   "overlay",
+   "tls"
+  ],
+  "hardening": [
+   "no_aslr",
+   "no_dep",
+   "no_cfg",
+   "no_high_entropy_va",
+   "no_embedded_signature"
+  ]
+ }
+}

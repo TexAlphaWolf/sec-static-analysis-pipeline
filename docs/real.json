@@ -1,0 +1,771 @@
+{
+ "kind": "scan",
+ "version": "1.0.0",
+ "source": "C:\\Windows\\System32 (Windows 11)",
+ "now": 1794521162,
+ "elapsed_s": 103.0640215630001,
+ "options": {
+  "depth": 0,
+  "max_mb": 256,
+  "yara": true,
+  "reference": true,
+  "workers": 12
+ },
+ "files": {
+  "total": 4716,
+  "pe": 4405,
+  "not_pe": 311,
+  "malformed": 0,
+  "unreadable": 0,
+  "too_big": 0,
+  "bytes": 3014456167,
+  "pe_bytes": 2983132512,
+  "malformed_reasons": []
+ },
+ "pe": {
+  "machines": [
+   [
+    "x64",
+    4387
+   ],
+   [
+    "x86",
+    18
+   ]
+  ],
+  "bits_64": 4387,
+  "dll": 3756,
+  "subsystems": [
+   [
+    "windows console",
+    2654
+   ],
+   [
+    "windows gui",
+    1471
+   ],
+   [
+    "native",
+    272
+   ],
+   [
+    "boot application",
+    8
+   ]
+  ],
+  "dotnet": 28,
+  "signed_embedded": 1097,
+  "checksum_zero": 1,
+  "checksum_right": 4404,
+  "no_imports": 472,
+  "exports": 3518,
+  "with_warnings": 0
+ },
+ "traits": {
+  "packer_section": 0,
+  "high_entropy_code": 6,
+  "writable_code": 0,
+  "entry_outside_code": 0,
+  "injection_imports": 4,
+  "debugger_check": 2875,
+  "few_imports": 21,
+  "checksum_mismatch": 0,
+  "future_timestamp": 2362,
+  "overlay": 0,
+  "tls": 1243,
+  "no_aslr": 37,
+  "no_dep": 101,
+  "no_cfg": 419,
+  "no_high_entropy_va": 137,
+  "no_embedded_signature": 3308
+ },
+ "indicators_per_file": [
+  690,
+  1569,
+  1500,
+  642,
+  4,
+  0
+ ],
+ "flagged": [
+  [
+   "ClipUp.exe",
+   [
+    "high_entropy_code",
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "dbgeng.dll",
+   [
+    "injection_imports",
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "Faultrep.dll",
+   [
+    "injection_imports",
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "ttdinject.exe",
+   [
+    "injection_imports",
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "aadauthhelper.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "aadcloudap.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "aadtb.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "AboutSettingsHandlers.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "AboveLockAppHost.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "AccountsRt.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "AcGenral.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "aclui.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "ActivationClient.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "ActiveSyncProvider.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "adhsvc.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "aeinv.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "aepic.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "agentactivationruntimewindows.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "AgentGovernanceCSP.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "AggregatorHost.exe",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "APHostService.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "APMon.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "AppContracts.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "AppExtension.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ],
+  [
+   "appinfo.dll",
+   [
+    "debugger_check",
+    "future_timestamp",
+    "tls"
+   ]
+  ]
+ ],
+ "examples": {
+  "high_entropy_code": [
+   "ClipUp.exe",
+   "d3dcsx_42.dll",
+   "GenValObj.exe",
+   "SppExtComObj.Exe",
+   "sppsvc.exe",
+   "WMVDECOD.DLL"
+  ],
+  "injection_imports": [
+   "dbgeng.dll",
+   "Faultrep.dll",
+   "kernel32.dll",
+   "ttdinject.exe"
+  ],
+  "few_imports": [
+   "HalExtIntcLpioDMA.dll",
+   "HalExtIntcPseDMA.dll",
+   "HalExtPL080.dll",
+   "hvax64.exe",
+   "hvix64.exe",
+   "iumdll.dll",
+   "mcupdate_AuthenticAMD.dll",
+   "mcupdate_GenuineIntel.dll"
+  ],
+  "no_aslr": [
+   "d3dx9_24.dll",
+   "d3dx9_25.dll",
+   "d3dx9_26.dll",
+   "d3dx9_27.dll",
+   "d3dx9_28.dll",
+   "d3dx9_29.dll",
+   "d3dx9_30.dll",
+   "d3dx9_31.dll"
+  ]
+ },
+ "timestamps": {
+  "decades": [
+   [
+    1970,
+    272
+   ],
+   [
+    1980,
+    332
+   ],
+   [
+    1990,
+    301
+   ],
+   [
+    2000,
+    373
+   ],
+   [
+    2010,
+    416
+   ],
+   [
+    2020,
+    441
+   ],
+   [
+    2030,
+    314
+   ],
+   [
+    2040,
+    275
+   ],
+   [
+    2050,
+    264
+   ],
+   [
+    2060,
+    328
+   ],
+   [
+    2070,
+    270
+   ],
+   [
+    2080,
+    315
+   ],
+   [
+    2090,
+    292
+   ],
+   [
+    2100,
+    212
+   ]
+  ],
+  "zero": 0,
+  "after_now": 2362
+ },
+ "yara": {
+  "files": 4405,
+  "errors": 0,
+  "retried": 1,
+  "same_traits": 4405,
+  "counts": {
+   "packer_section": 0,
+   "high_entropy_code": 6,
+   "writable_code": 0,
+   "entry_outside_code": 0,
+   "injection_imports": 4,
+   "debugger_check": 2875,
+   "few_imports": 21,
+   "checksum_mismatch": 0,
+   "future_timestamp": 2362,
+   "overlay": 0,
+   "tls": 1243,
+   "no_aslr": 37,
+   "no_dep": 101,
+   "no_cfg": 419,
+   "no_high_entropy_va": 137,
+   "no_embedded_signature": 3308
+  },
+  "disagreements": {
+   "packer_section": 0,
+   "high_entropy_code": 0,
+   "writable_code": 0,
+   "entry_outside_code": 0,
+   "injection_imports": 0,
+   "debugger_check": 0,
+   "few_imports": 0,
+   "checksum_mismatch": 0,
+   "future_timestamp": 0,
+   "overlay": 0,
+   "tls": 0,
+   "no_aslr": 0,
+   "no_dep": 0,
+   "no_cfg": 0,
+   "no_high_entropy_va": 0,
+   "no_embedded_signature": 0
+  }
+ },
+ "reference": {
+  "files": 4405,
+  "refused": 0,
+  "compared": 4405,
+  "identical": 4405,
+  "checksum_compared": 4306,
+  "field_differences": {},
+  "refusals": []
+ },
+ "entropy": {
+  "executable": [
+   3881,
+   15,
+   30,
+   21,
+   14,
+   18,
+   10,
+   101,
+   62,
+   116,
+   222,
+   911,
+   2568,
+   45,
+   4,
+   3
+  ],
+  "other": [
+   4468,
+   1749,
+   3348,
+   991,
+   1076,
+   1130,
+   1331,
+   1470,
+   1754,
+   2236,
+   2125,
+   893,
+   301,
+   99,
+   72,
+   35
+  ],
+  "executable_sections": 8021,
+  "executable_high": 6
+ },
+ "top_section_names": [
+  [
+   ".rsrc",
+   4346
+  ],
+  [
+   ".text",
+   4187
+  ],
+  [
+   ".data",
+   4186
+  ],
+  [
+   ".reloc",
+   4181
+  ],
+  [
+   ".rdata",
+   4042
+  ],
+  [
+   ".pdata",
+   3957
+  ],
+  [
+   "fothk",
+   3584
+  ],
+  [
+   ".didat",
+   1995
+  ],
+  [
+   ".imrsiv",
+   56
+  ],
+  [
+   "INIT",
+   46
+  ],
+  [
+   "PAGE",
+   46
+  ],
+  [
+   ".00cfg",
+   44
+  ],
+  [
+   ".edata",
+   39
+  ],
+  [
+   "GFIDS",
+   38
+  ],
+  [
+   ".idata",
+   37
+  ]
+ ],
+ "top_dlls": [
+  [
+   "api-ms-win-core-processthreads-l1-1-0.dll",
+   2842
+  ],
+  [
+   "api-ms-win-core-sysinfo-l1-1-0.dll",
+   2828
+  ],
+  [
+   "api-ms-win-core-profile-l1-1-0.dll",
+   2793
+  ],
+  [
+   "api-ms-win-core-errorhandling-l1-1-0.dll",
+   2776
+  ],
+  [
+   "api-ms-win-core-libraryloader-l1-2-0.dll",
+   2693
+  ],
+  [
+   "api-ms-win-core-synch-l1-1-0.dll",
+   2425
+  ],
+  [
+   "ntdll.dll",
+   2402
+  ],
+  [
+   "api-ms-win-core-handle-l1-1-0.dll",
+   2350
+  ],
+  [
+   "api-ms-win-core-debug-l1-1-0.dll",
+   2328
+  ],
+  [
+   "api-ms-win-core-heap-l1-1-0.dll",
+   2304
+  ],
+  [
+   "api-ms-win-core-synch-l1-2-0.dll",
+   2300
+  ],
+  [
+   "api-ms-win-core-localization-l1-2-0.dll",
+   2214
+  ],
+  [
+   "api-ms-win-core-rtlsupport-l1-1-0.dll",
+   2119
+  ],
+  [
+   "api-ms-win-core-string-l1-1-0.dll",
+   2110
+  ],
+  [
+   "api-ms-win-core-processthreads-l1-1-1.dll",
+   1926
+  ]
+ ],
+ "top_functions": [
+  [
+   "GetCurrentThreadId",
+   3834
+  ],
+  [
+   "GetCurrentProcessId",
+   3833
+  ],
+  [
+   "GetSystemTimeAsFileTime",
+   3824
+  ],
+  [
+   "QueryPerformanceCounter",
+   3820
+  ],
+  [
+   "RtlLookupFunctionEntry",
+   3695
+  ],
+  [
+   "RtlCaptureContext",
+   3680
+  ],
+  [
+   "RtlVirtualUnwind",
+   3680
+  ],
+  [
+   "__C_specific_handler",
+   3671
+  ],
+  [
+   "SetUnhandledExceptionFilter",
+   3669
+  ],
+  [
+   "GetCurrentProcess",
+   3666
+  ],
+  [
+   "_initterm",
+   3663
+  ],
+  [
+   "UnhandledExceptionFilter",
+   3641
+  ],
+  [
+   "TerminateProcess",
+   3634
+  ],
+  [
+   "memset",
+   3502
+  ],
+  [
+   "GetLastError",
+   3448
+  ]
+ ],
+ "imphash": {
+  "distinct": 3837,
+  "largest_groups": [
+   [
+    "dae02f32a21e03ce65412f6e56942daa",
+    10
+   ],
+   [
+    "0666ed1f1c919f3b819158a8dd8a47af",
+    7
+   ],
+   [
+    "0deb7e66a4857715c703283ef46aaaae",
+    6
+   ],
+   [
+    "88867f47f9d2382c7360201d8ff53a0b",
+    6
+   ],
+   [
+    "b52012fa79250c1c471ee0f66cfed5b7",
+    5
+   ]
+  ]
+ },
+ "strings": {
+  "files_with_urls": 1732,
+  "files_with_ipv4": 1111,
+  "files_with_registry": 193,
+  "top_hosts": [
+   [
+    "www.microsoft.com",
+    1161
+   ],
+   [
+    "crl.microsoft.com",
+    1073
+   ],
+   [
+    "schemas.microsoft.com",
+    455
+   ],
+   [
+    "www.w3.org",
+    176
+   ],
+   [
+    "go.microsoft.com",
+    117
+   ],
+   [
+    "microsoft.com",
+    64
+   ],
+   [
+    "login.microsoft.com",
+    52
+   ],
+   [
+    "cacerts.digicert.com",
+    48
+   ],
+   [
+    "crl3.digicert.com",
+    48
+   ],
+   [
+    "crl4.digicert.com",
+    48
+   ]
+  ]
+ },
+ "accuracy": null,
+ "speed": {
+  "files_per_s": 45.75796605333554,
+  "mb_per_s": 29.24838485132611
+ },
+ "groups": {
+  "indicators": [
+   "packer_section",
+   "high_entropy_code",
+   "writable_code",
+   "entry_outside_code",
+   "injection_imports",
+   "debugger_check",
+   "few_imports",
+   "checksum_mismatch",
+   "future_timestamp",
+   "overlay",
+   "tls"
+  ],
+  "hardening": [
+   "no_aslr",
+   "no_dep",
+   "no_cfg",
+   "no_high_entropy_va",
+   "no_embedded_signature"
+  ]
+ },
+ "published": "source renamed; file names kept only for traits found in at most 50 files"
+}
